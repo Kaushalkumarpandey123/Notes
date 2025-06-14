@@ -1,0 +1,61 @@
+
+1. Microservices Basics
+What are microservices, and how do they differ from monolithic architecture?
+What are the key characteristics of a microservices architecture?
+What are the advantages and disadvantages of microservices?
+What challenges do microservices introduce compared to monoliths?
+How do you determine when to use microservices over a monolithic approach?
+2. Service Communication
+What are the different ways microservices communicate with each other?
+How do you handle synchronous vs. asynchronous communication between services?
+What is an API Gateway, and why is it needed?
+Explain REST vs. GraphQL in the context of microservices.
+How do you implement request tracing in a distributed microservices environment?
+3. Service Discovery & Load Balancing
+What is service discovery, and why is it important?
+What are some service discovery tools you have used (e.g., Eureka, Consul, Zookeeper)?
+How do you ensure load balancing across microservices?
+What are client-side vs. server-side load balancing strategies?
+4. Data Management & Transactions
+How do you handle database management in microservices?
+What is the Database-per-Service pattern?
+How do you handle distributed transactions across multiple microservices?
+What are the CAP theorem and its implications for microservices?
+What is the Saga pattern, and how does it help in distributed transactions?
+5. Fault Tolerance & Resilience
+What are some common failure scenarios in microservices?
+How do you handle failures in a microservices-based system?
+What is Circuit Breaker, and how does it work (e.g., Hystrix, Resilience4j)?
+How do you implement retries and timeouts in microservices?
+What is the difference between fail-fast and fail-safe strategies?
+6. Security in Microservices
+What are some security challenges in microservices?
+How do you implement authentication and authorization in microservices?
+What is OAuth2, and how does it work with microservices?
+How do you handle API security in microservices?
+What are JWT tokens, and how do they help in securing microservices?
+7. Deployment & CI/CD
+How do you deploy microservices efficiently?
+What are blue-green and canary deployments?
+How do you implement CI/CD for microservices?
+What is the role of Docker and Kubernetes in microservices deployment?
+How do you handle rolling updates in Kubernetes?
+8. Logging & Monitoring
+How do you monitor microservices?
+What tools have you used for logging and monitoring (e.g., ELK Stack, Prometheus, Grafana)?
+What is distributed logging, and how do you implement it?
+How do you track requests across multiple microservices (e.g., using Zipkin, Jaeger)?
+9. Performance Optimization
+How do you optimize the performance of microservices?
+How do you handle high throughput in microservices?
+What is caching, and how do you use it in microservices?
+What caching strategies have you implemented (e.g., Redis, Memcached)?
+How do you handle rate limiting in microservices?
+10. Event-Driven Microservices
+What is event-driven architecture, and how does it benefit microservices?
+How do you implement event-driven communication in microservices?
+What is Kafka, and how does it help in microservices?
+What are the differences between Kafka, RabbitMQ, and ActiveMQ?
+
+
+

@@ -1,0 +1,240 @@
+  main ---> java, frameworks, aws, docker, kubernetss, 
+   
+   jmeter -- api testing blaze meter 
+   jenkins -- 
+   junit  
+   jira
+   jshell  sql --> nosql ((mongo db, apche cassandra)
+
+
+
+
+@springbootapplication -->( @configuration + @componenetscan + @autoconfiguration ) 
+
+
+Sort Employees class using name of Employees .
+What is executor framework.
+Difference between deep and shallow cloning.
+Iteration over HashMap.
+How do you deploy SpringBoot application on local machine.
+Need for Serialization in Java.
+
+
+There are 10 employees in a department. You have to expose an API to the UI, where emloyee's name and dob is returned in response whose name has no repeating characters. 
+
+you have to write down a procedure that fetch all the employees from the table and then write the business logic in service layer that filter the employee
+
+
+Infy
+																   Rest api and its flow, garbage collector, finalize method, interface vs abstract class, collections, java 8, mysql basics and index in sql
+																   Springboot annotations Exception handling Collection framework Oops concept Sql query
+																   What is the difference between array list & linked list? what is the difference between class & interface? why or when to use abstract class over interface?
+																   What is the difference between Typescript and JavaScript?
+																   What is the extension method ?
+																   
+
+naming server -eureka  regidstry of microservices 
+load balancer 
+feign client 
+api gateway 
+
+
+reverseArray
+
+
+The Index in SQL is a special table used to speed up the searching of the data in the database tables. 
+
+collections
+design patterns
+string tricky questions 
+put and patch 
+request param path varibale
+web server vs application server
+
+Remove duplicate s from an array
+1) Find min max in an array
+2) Reverse an array
+3) Thread related questions.
+4) why string immutable
+
+1. Question based on collection
+2. comparable and comparator
+3. Immutable
+4. String handling
+5. Difference between local and session storage
+
+6. Difference between setTimeOut and setInterval
+7.Javascript unit test framework
+
+can class run without main method ?
+
+collection ,spring hibernate use , difference between jsp servlet
+
+About static block, static method, the execution flow
+oops concepts
+spring mvc flow
+
+OOPS concepts
+
+Diff bw Hashmap and Concurrent Hashmap?
+
+When will we get ConcurrentModificationException?
+
+What are all the REST methods?
+
+Explain about JSP modules.
+
+Diff bw Comparator and Comparable interface with example.
+
+Iterate a list using lambda expressions
+
+Diff bw Abstract class and Interface?
+
+Custom exception with example
+
+Is custom exception is Runtime exception? and how? with example.
+
+String, String builder, and String buffer
+
+Internal logic of HashSet.
+
+Find middle element of linked list in one pass
+
+Hibernate many to many mapping
+
+Method overloading questions
+
+1. Write Singleton Class.
+
+2. How to resolve circular dependency in Spring? Like Class A has an Object of Class B and vice versa.
+
+3. Difference between Concurrent HashMap and Synchronized HashMap.
+
+4. Difference between Externalizable and Serializable.
+
+5. It was a puzzle. Find angle between Hour hand and Minute hand when it's 3:15.
+
+
+lazy loading and eager loading
+
+
+Strong hands-on experience in Core Java/J2EE technologies
+• Core Java, Spring (Core, Aspects, MVC etc.), Hibernate Skills (transaction management, JPA/JTA concepts). Experience in Oracle SQL queries
+• Multithreading (Advanced thread concepts) / Synchronization / Executor Frameworks / Concurrency frameworks.
+• Strong knowledge and experience with Databases
+• DB Joins
+• Constraints / Primary and Referential Integrity
+• Performance tuning techniques (explain plan, Indexes, Partitions)
+• Views / Materialized Views.
+• Implicit/Explicit cursors
+• At least 4 years of strong experience in REST or SOAP based web services
+• At least 2 years of strong experience with micro-services (Nice to have skills)
+• At least 2 years of strong experience in container technologies (Docker, Kubernetes, OpenShift) Nice to have skills
+• Experience in software development life cycle.
+• Experience in Design and architecture review.
+• Experience in application performance
+• Ability to work in team in diverse/ multiple stakeholder environment
+• Experience in Financial Services domain
+• Analytical skills
+• Great interpersonal and communication skills
+• Experience and desire to work in a Global delivery environment
+
+
+First 5 Days:
+Select - Where - Functions- Alies - Like
+
+Next 5 Days:
+Order by-Group by- Create - Drop - Truncate - Limit
+
+Next 5 Days:
+Join - Union All - Alter - Add - Update - Insert Into
+
+Next 5 Days:
+With - Subquery - Case - Operators - Procedures - ExistsPRPMPT OF THJE WAY MY NAME IS ARKANMSDH KHARE BV  GhAESJ hreHarsh Gurehiya my name is harsh sdfgdfgdfhh
+
+NTT DATA INTERVIEW PREP
+-------------------------
+
+1.oops concepts
+2.how to write custom Immuntable class?
+3.internal implementation of HashMap?
+4.How does concurrent hashmap work?
+5.some java programs
+
+Memory management in java
+Few questions on hibernate and spring
+Questions on garbage collection and algo used for garbage collection
+1st round - written test included question like WAP to implement custom hashmap,
+Singleton class,
+Create a Deadlock condition etc.,
+echnical round with client, includesquestions on jvm, memory management and garbage collection etc.I
+
+
+Triggers sql injections etc
+Write a program tonfind maximum of employees salary using java streams
+
+
+Round 1: (30 min , Google meet) 1. Abstract vs Interface 2. Can we overload Main method? 3. Overloading vs Overriding 4. Can we create object of Abstract class (No, only ref can be created) 5. String immutable why? 6. checked, unchecked exception. 7. GET vs POST Method 8. How HashMap works internally (hash collision, hashing algo basic) 9. Can we put duplicate value in hashmap and why? 10. Primary key and unique key difference? 11. Truncate, Delete, Alter. 12.   Round 2. (30 min, Google meet) Very boring interviewers was there, I think he was sleeping or eating during call. 1. All the above basic questions of Round 1. 2. Spring annotations 3. Include(), forward() 4. A. String reverse code B. Find 2nd highest salary from emp table 5. How will you start writing code? ( basically he was asking for httpservlet) I said I write code in Eclipse and do not manually import packages (he was mad, that I use IDE for suggestion, Also I've worked on Spring boot and not on Servlet) 6. Lifecycle of thread 7. Why string is immutable? (Caching, security, string pool etc.) 8. What are the JDBC steps ( I don't know because I use Spring Data JPA and configure in application. properties file) 9. Do you know Jquery, AJAX? ( I said no, because I'm backend engineer, no more questions further to this topic) 10. Any front end skills ( I said I know basics of HTML, CSS, JS ) *** Interviewers don't have any idea other then servlet, JSP etc. Round 2 interviewer's English was very poor. H was not able to frame the questions properly, I don't know how he communicate with clients, God knows!
+
+
+
+Your Output
+1
+
+Exception in thread  main  java.util.NoSuchElementException: No line found
+	at java.util.Scanner.nextLine(Scanner.java:1540)
+	at Solution.dataTypes(Solution.java:6)
+	at Runner.executeAndPrintOutput(Runner.java:52)
+	at Runner.main(Runner.java:59)
+
+
+class ABC{
+ 
+    ABC(int x)
+    {
+        System.out.println("ONE argument constructor");
+    }
+ 
+    ABC()
+    {
+        System.out.println("No argument constructor");
+    }
+ 
+    static
+    {
+        System.out.println("1st static init");
+    }
+ 
+    {
+        System.out.println("1st instance init");
+    }
+ 
+    {
+        System.out.println("2nd instance init");
+    }
+ 
+    static
+    {
+        System.out.println("2nd static init");
+    }
+ 
+    public static void main(String[] args)
+    {
+        new ABC();
+        new ABC(8);
+    }
+}
+
+
+Given the list find the second largest number nearest to the repetitive  number
+
+Find position of number from sorted matrix with optimum complexity.
+
+If element not present return -1,-1
+For 8 output -> 1,1
+
+1    3    4    6
+7    8    10   11
+13   14   16   18
+
+Find second largest integer from array (without sorting / in O(n)

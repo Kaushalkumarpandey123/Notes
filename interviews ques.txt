@@ -1,0 +1,149 @@
+what is Comparator 
+
+1. What is the pillar of oops concepts :
+   Encapsulation
+   Inheritance
+   Polymorphism
+   Abstraction
+  
+2. where did you use the concepts of OOPS in your project.
+3. Explain Exception hierarchy in Inheritance
+4. parant child override scenario
+5. can we override static and private methods
+6. what is the diffrence of Java 7 and java 8 interface
+7. What is final, finally and finally.
+8. what is equals and hashcode method and its contract.
+10. Why checked exception also called as compile time exception, is it occurs in compile time ? - No
+11. How to write the custom exception.(Throw vs Thorws)
+16. How many ways to create the String object ? (intern method used to get reference from the SCP).
+17. Why String is immutable. (String Vs StringBuilder Vs StringBuffer).
+18. Write custom immutable class. (do the clone if mutable object or return new object)
+19. Marker Interface and create our own marker interface.
+
+
+
+ 
+
+
+make interface as private and protected, where can use.
+Singlton class where to use and how to create.
+CompleteableFuture 
+Java 8 feactures
+Functional Interface
+transient and volatile
+create Anonymus method, use it by lamda
+
+Procedure Vs Function in database
+create index , will it work on UPER(eId)
+@Transactional annotation
+
+design the Uber 
+
+marker interface
+ForkJoinPool
+Concurent hashmap
+Shallow copy Vs Deep Copy
+equals() Vs ==
+Default Vs Static methods
+How to make any object immutable
+Methods to create Threads
+Why use Runnable instead of Thread class
+How you manage the transaction in your application (Microservice/Spring boot)
+difference btw Factory and Abstract Factory design pattern
+How to make any object immutable
+Solid principle design
+Stratagy pattern -> A class of payment methods (phone pay, google pay), add one more method
+what is Massaging Queue
+What is Kafka
+What is Spring Security how it works
+SecurityFilterChain how works
+Explain Microservice architecture
+What it the architecture of your application , how it works
+@Qualifire & @Primary in Spring boot
+Shadowing in SQL
+NoSQL ?
+CRUD operation in JPA
+Native queries
+diffrence between PUT & PATCH Api
+What is Singlton design pattern and why
+what is Distributed system and how to achive
+Coding question - Buy and Sell find max profit
+
+Garbage collectors
+Dynamic Binding
+Override
+String Data type
+Normal HashMap Vs Concorent HashMap
+Steps to connect db with the Spring boot application 
+Why microservices when we can use Spring boot application
+
+Cohension
+Aggriget method
+
+1. Input: nums = [0,1,0,3,12] 
+   Output: [1,3,12,0,0]   
+2. Find the second largest value in an array using stream API.
+3. Sql Query to find the all Employee details who has max sallary in each department.
+ Left join Vs Right join
+4. Post Request Vs Put Request
+   @SpringBootApplication -> Break Down
+   @Id 
+   @GenerationValue
+5. Embaded Server Tomcat in Spring Boot, if possible then configuration to change this server with other.
+6. Find the second max sallary of an employee
+
+1. find the minimum step to find the destination on a line starting from point 0.
+Ex. a) d=0 -> 0 -> 0(ans)
+    b) d=1 -> 0,+1 -> 1
+	c) d=2 -> 0,+1,-2,+3 -> 3
+	d) d=3 -> 0,+1,+2 -> 2
+	e) d=4 -> 0,+1,-2,+3,+2 -> 4
+	f) d=10 -> 0,+1,+2,+3,+4 -> 4
+	
+2. find the maximum length of Arithmatic Expression(AP) from the given sorted set.
+Ex. a) {1,7,10,13,14,19} -> {1,7,13,19} -> 4(ans)
+    b) {1,7,10,13,14} -> {1,7,13} / {7,10,13} -> 3(ans)
+	
+3. find the minimum cost to reach the bottom-right cell of matrix from left-top cell.
+   if cost -1 cant move downward, if cost -2 cant move forward, if cost -3 cant move.
+   where cost is in negative then no cost.
+   if not possible print "No path".
+Ex.  3 3
+     1 3 -2
+     2 -3 5
+     3 4 2
+  (1+3+0+5+2 ->11)/ (1+2+3+4+2 ->12) -> 11(ans)	 
+   
+123 456 -> 123 654 -> 321654 -> 456123
+	
+	
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

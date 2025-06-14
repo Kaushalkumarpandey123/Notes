@@ -1,0 +1,97 @@
+
+Docker :
+Docker Hub:
+Docker Registory:
+
+
+cammands :
+check version :   docker --version
+Pull any image : docker pull <image_name>
+To check images : docker images
+To check containers : docker ps -a
+To check running containers : docker ps
+To start container : docker start <container_id>
+To stop container : docker stop <container_id>
+To delete container : docker rm <container_id>
+To delete images : docker rmi <image_id>
+
+To dockarized the Spring boot project :
+1. create the Dockerfile - 
+  FROM openjdk:21
+  ARG JAR_FILE=target/*.jar
+  COPY ${JAR_FILE} productservice.jar
+  ENTRYPOINT ["java", "-jar","/productservice.jar"]
+  EXPOSE 8081
+ 
+2. run the project to create the jar file:
+ ./mvnw clean package
+
+3. build a docker image using dockerFile:
+  docker build -t dockerrepo/productservice:0.0.1 -t 
+    : used for to assign a tag name to image
+  dockerrepo/productservice:0.0.1 : this is the <repo_name>/<image_name>:<tag_name>
+  . : this denot the directory from where we refer the Dockerfile
+  
+4. run the docker image with the binded port :
+   docker run -d -p 8080:8080 productservice:0.0.1
+or docker run -d -p 8080:8080 <image_id>   
+
+
+To push the created docker images :
+1. tag your image to already created docker repository on docker hub
+    docker tag <image_id> kaushal54321/dockerrepo:latest
+
+2. Then push the image:
+   docker push kaushal54321/dockerrepo:latest
+   
+   
+
+
+Kafka :
+Apache Kafka is an open-source distributed event streaming platform.
+
+pub sub model
+
+Producer - Source of deta who public the data
+Consumer - It responsible to consume/recieve the data
+Broker/ Kafka - nothing but just a server, an intermediate entity between producer and consumer
+Cluster - group of distributed computers
+Topic/category - use to distingous between the message types for diffrent events
+Partitions - we can part of the topic for better performance
+Offset - A sequence number is assigned to each message in each partition of a Kafka topic
+Consumer Groups - It requirs to manage the workload and assign every consumer litsen to diffrent partition
+Zookeeper - Kafka uses zookeeper for coordination and to track the status of Kafka cluster nodes and it also keep track of topic partition offset etc. Its a manager of Kafka.
+
+default ports :
+Zookeeper : 2181
+Kafka Server/ broker : 9092
+
+Steps to use the kafka :
+Step 1 : start the kafka environment - 
+  a. commands to start the zookeeper :    D:\Software\kafka>.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+  b. commands to start the kafka server : D:\Software\kafka>.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+Step 2: Create a topic to store the events :
+   D:\Software\kafka>.\bin\windows\kafka-topics.bat --create --topic topic-example --bootstrap-server localhost:9092
+   
+Step 3 : write some events into the topic :
+  D:\Software\kafka>.\bin\windows\kafka-console-producer.bat --topic topic-example --bootstrap-server localhost:9092
+>hello world
+>kafka topic event
+>demo 1
+>demo 2
+>^CTerminate batch job (Y/N)? y
+ 
+Step 4 : Read the events :
+   D:\Software\kafka>.\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
+hello world
+kafka topic event
+demo 1
+demo 2
+ 
+ 
+
+
+
+

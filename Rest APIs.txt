@@ -1,0 +1,13 @@
+/** Building Real-Time REST APIs with Spring Boot **/
+
+/** 14 **/
+REST - Representational State Transfer 
+URI - Uniform Resource Identifier
+
+HTTP Methods:
+GET- to get a collection or a single resource
+POST- to create a new resource
+PUT- to update an exisiting resource
+DELETE- to delete a collection or a single resource
+PATCH- 
+

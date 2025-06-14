@@ -1,0 +1,57 @@
+Object-Oriented Programming (OOPs)
+---------------------------------
+1. How does Java handle the diamond problem in multiple inheritance when using interfaces?
+2. Can we override a private method in Java? Why or why not?
+3. What happens if a class implements two interfaces with the same default method? How would you resolve this conflict?
+4. Can you have an abstract class without abstract methods? Why would you do this?
+5. Explain how inner classes, static nested classes, and anonymous inner classes differ and when you would use each.
+6. Can a constructor be synchronized? What happens if you try?
+7. Is it possible to call the super() constructor and this() constructor in the same constructor? Why or why not?
+8. If a class has a private constructor, how can you instantiate it?
+9. Can you declare a class as final and abstract at the same time? Why or why not?
+10. If a superclass has a static method and a subclass has a method with the same name, is it overridden? Explain.
+
+
+Exception Handling
+------------------
+1. What will happen if you catch an exception in the wrong order (e.g., catching Exception before ArithmeticException)?
+2. If a finally block contains a return statement, what happens to exceptions thrown in the try block?
+3. Can you handle an exception thrown in a static initializer block? Why or why not?
+4. What happens if a catch block has its own exception? How is it handled?
+5. Can a single catch block handle multiple exception types? If yes, how is this implemented in Java?
+6. What happens if a method declares an exception using the throws keyword but doesn’t actually throw it?
+7. Can a try block exist without a catch or finally block?
+8. How would you design a method to propagate exceptions while ensuring the application remains robust?
+9. What is the difference between rethrowing an exception using throw e vs throw new Exception(e)?
+10.If an exception is thrown in a finally block, what happens to the exception in the try block?
+
+
+Collection Framework
+--------------------
+1. Why is the load factor of a HashMap set to 0.75 by default? Can you adjust it, and what impact does it have?
+2. How does Java handle hash collisions in a HashMap?
+3. Explain why ConcurrentModificationException occurs and how to avoid it when iterating over a collection.
+4. How would you design a custom ImmutableList in Java?
+5. Why are equals() and hashCode() critical for objects used as keys in a HashMap?
+6. What would happen if you insert an object with a mutable key into a HashMap and then change the key's state?
+7. Can you explain the difference between fail-fast and fail-safe iterators? Provide examples.
+8. How does TreeMap maintain sorting? What would happen if the comparator returns inconsistent results?
+9. Why is Hashtable considered legacy while HashMap is preferred?
+10.How would you efficiently find duplicates in a list using Java's collection framework?
+
+
+Multithreading
+--------------
+1. Can two threads execute two synchronized methods of the same object simultaneously? Why or why not?
+2. What happens if a thread calls wait() on an object without holding its lock?
+3. Can you explain a situation where volatile is insufficient, and synchronized is required instead?
+4. How does the ThreadLocal class work? Can it lead to memory leaks? If so, how?
+5. What is a deadlock? How would you detect and prevent it in Java?
+6. What is the difference between invokeAndWait() and invokeLater() in multithreaded GUI programming?
+7. Why is it dangerous to use Double-Checked Locking in Java prior to Java 1.5? How was it fixed?
+
+8. What would happen if two threads attempt to modify the same ConcurrentHashMap bucket at the same time?
+9. How does Java's ForkJoinPool differ from ExecutorService?
+10.What happens when a thread calls yield()? Can you rely on it to improve concurrency?
+
+

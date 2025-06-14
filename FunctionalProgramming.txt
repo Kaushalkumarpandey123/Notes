@@ -1,0 +1,127 @@
+
+Java - Springboot Senior Developer-Springboot
+
+/****** 19 *****/
+Stream
+Functional Interface ->  Which has only one abstract method
+Predicate -> Use to represent (boolean value) one argument
+Collecters -> Collect all the data and return as a list
+lamda expression -> (x -> x%2==0) minimse the method writing for single line function
+Consumer -> It consume the input and dont return any thing i.e forEach
+Function -> taking one input and return output
+Method refrence -> System.out::println; stream().map(String::toUpperCase); Supplier<String> supplier = String::new;
+Supplier -> return something without taking any parameters
+
+
+
+filter -> predicate
+map -> function
+foreach -> Counsumer
+
+BinaryOperator-> same as function ,take two input and return one output in same data type
+
+
+/****** 20 *****/
+BehaviourParameterization -> pass predicate with a function like a parameters
+filterAndPrint(numbers, x -> x%2==0);
+
+/****** 21 *****/
+UnaryOperator ->same as BinaryOperator, it take only one input and return same data type output
+
+/****** 24 *****/
+BiPredicate -> similar to predicate, take two input return one boolean output
+BiFunction -> take two input and return one output of any datatype
+BiConsumer -> take two input and consume them i.e. print them, no return value
+
+/****** 28 *****/
+allMatch -> return true when all items satisfied with the condition(predicate) 
+noneMatch -> return true when none items satisfied with the condition(predicate) 
+anyMatch -> return true when atleast one items satisfied with the condition(predicate) 
+
+courses.stream().allMatch(course -> course.getScore>95);
+
+/****** 29 *****/
+Comparator -> used to compare items on basis of given codition
+Comparator<Course> comp = Comparator.comparing(course::getScore);
+Comparator<Course> comp = Comparator.comparing(course::getScore).reversed();
+course.stream().sorted(comp);
+
+/****** 30 *****/
+limit -> to limit the output
+skip -> to skip the items
+takeWhile -> take items util the given condition match otherwise skip the remaing
+     numbers.stream().takeWhile(course -> course.getScore>95).collect(Collectors.toList());
+dropWhile -> skip items until the given condition match	after that take all items
+
+/****** 31 *****/
+max -> It return the max value from the comparator
+min -> It return the min value from the comparator
+orElase -> when you didnt get result from the min/max 
+findFirst -> return first element
+findAny -> return value when any item find from the comparator
+
+these all returns optional.
+
+/****** 32 *****/
+sum -> default return 0
+average -> return optional
+count ->
+
+/****** 33 *****/
+groupingBy -> courses.stream().collect(Collectors.groupingBy(Course::getCategory));
+counting -> courses.stream().collect(Collectors.groupingBy(Course::getCategory, Collectors.counting()));
+mapping -> courses.stream().collect(Collectors.groupingBy(Course::getCategory, Collectors.mapping(Course::getName, Collectors.toList()));
+
+/****** 34 *****/
+Stream.of() -> Stream.of(0,1,2,3,4,5).count()
+Arrays.stream(numberArray).sum()
+
+/****** 35 *****/
+IntStream.range(1,10),sum()  = 45
+IntStream.rangeClosed(1,10),sum()  = 55
+IntStream.iterate(1, e -> e+2).limit(10).sum() = 100
+IntStream.iterate(1, e -> e+1).limit(5).peek(System.out::println).sum() = 1,2,3,4,5 $15
+IntStream.iterate(2, e -> e+2).limit(5).peek(System.out::println).sum() = 2,4,6,8,10 $30
+IntStream.iterate(2, e -> e+2).limit(5).boxed().collect(Collectors.toList()) = [2,4,6,8,10]
+//We can't use comparator with premitive datatype so that we have used boxed()
+
+/****** 36 *****/
+IntStream.rangeClosed(1,10).reduce(1, (x,y)->x*y) = 3628800
+LongStream.rangeClosed(1,10).reduce(1, (x,y)->x*y) = 3628800
+LongStream.rangeClosed(1,50).mapToObj(BigInteger::valueOf).reduce(BigInteger.ONE, BigInteger::multiply) = 45132648612357281358665735287238562357
+
+/****** 37 *****/
+joining() -> courses.stream().collect(Collectors.joining(",")) = "Spring,Boot,API";
+split & flatMap -> courses.stream().map(course -> course.split("")).flatMap(Arrays::stream).collect(Collectors.toList()) = [s,p,r,i,n,g,a,p,i]
+courses.stream().map(course -> course.split("")).flatMap(Arrays::stream).distinct().collect(Collectors.toList()) = [s,p,r,i,n,g,a,p,i]
+
+/****** 38 *****/
+Higher Order Functions -> A function which return the function as argumnet
+
+Predicate<Course> higherOrder = course -> course.getScore>95; 
+or
+private static Predicate<Course> createhigherorder(int score){
+    //return higherOrder;
+	return course -> course.getScore>95; 
+}
+
+/****** 39 *****/
+termination methods -> findFirst() 
+
+/****** 40 *****/
+parallel() -> It improve the performance -> Java runs in lazy, for making it eagrly we use parallel method
+LongStream.range(0,100000000).sum() = takes 869ms
+LongStream.range(0,100000000).parallel().sum() = takes 601ms
+
+/****** 41 *****/
+replaceAll -> modify the same list = cources.replaceAll(str -> str.toUpperCase());
+removeIf  -> It remove the element if condition met = cources.removeIf(str -> str.length()<6);
+
+/****** 42 *****/
+Files.lines(Paths.get("file.txt")).foreach(System.out::println);
+Files.lines(Paths.get("file.txt")).map(str -> str.split(" ")).foreach(System.out::println);
+Files.list(Paths.get(".")).forEach(System.out::println);
+
+/****** 43 *****/
+Runable is also a functional interface.
+

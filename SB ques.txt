@@ -1,0 +1,219 @@
+**Spring Boot Tricky Interview Questions & Answers (3+ Years Experience)**
+
+### **1. Difference between `@Component`, `@Service`, and `@Repository`?**
+
+- **Answer:** All three are specializations of `@Component`. They help in organizing beans better:
+  - `@Component`: Generic bean for any Spring-managed class.
+  - `@Service`: Used for business logic-related components.
+  - `@Repository`: Used for DAO layer; adds database exception translation.
+- **Why?** Helps in structuring applications and makes it easier for Spring to scan and manage components.
+
+---
+
+### **2. Why does `@Transactional` not work on private methods?**
+
+- **Answer:** Spring AOP uses proxies, which can only intercept `public` methods.
+- **Example:**
+  ```java
+  @Transactional
+  private void processPayment() { ... } // Won’t work
+  ```
+- **Solution:** Keep transactional methods `public` or use `TransactionTemplate`.
+
+---
+
+### **3. Why `@Transactional` and `@Async` do not work together?**
+
+- **Answer:** `@Async` executes in a separate thread, so it loses the transactional context.
+- **Example:**
+  ```java
+  @Transactional
+  @Async
+  public void asyncMethod() { ... } // Transaction won't be applied
+  ```
+- **Solution:** Use `TransactionTemplate` within an async method to manually manage transactions.
+
+---
+
+### **4. When does `@Transactional` rollback?**
+
+- **Answer:** By default, it rolls back only on unchecked exceptions (`RuntimeException`).
+- **Solution:** Use `@Transactional(rollbackFor = Exception.class)` to include checked exceptions.
+- **Example:**
+  ```java
+  @Transactional(rollbackFor = Exception.class)
+  public void process() throws IOException { ... } // Rolls back on all exceptions
+  ```
+
+---
+
+### **5. Why do we use `@Primary` annotation?**
+
+- **Answer:** When multiple beans of the same type exist, `@Primary` gives priority.
+- **Example:**
+  ```java
+  @Primary
+  @Bean
+  public DataSource primaryDataSource() { ... }
+  ```
+
+---
+
+### **6. What happens if two `@Bean` methods have the same name?**
+
+- **Answer:** The second one will overwrite the first.
+- **Solution:** Use unique names or `@Qualifier` to avoid conflicts.
+
+---
+
+### **7. What if a `@Bean` method returns `null`?**
+
+- **Answer:** Spring will throw an error since it expects a valid bean.
+
+---
+
+### **8. Difference between `@EnableAutoConfiguration` and `@SpringBootApplication`?**
+
+- **Answer:** `@SpringBootApplication` includes `@EnableAutoConfiguration`, `@ComponentScan`, and `@Configuration`.
+
+---
+
+### **9. What is `@ConditionalOnProperty` used for?**
+
+- **Answer:** Enables beans only if a specific property exists in `application.properties`.
+- **Example:**
+  ```java
+  @ConditionalOnProperty(name = "feature.enabled", havingValue = "true")
+  @Bean
+  public MyFeature featureBean() { ... }
+  ```
+
+---
+
+### **10. Can we have multiple `@SpringBootApplication` classes in one project?**
+
+- **Answer:** No, it will cause conflicts.
+- **Solution:** Use multiple configuration classes instead.
+
+---
+
+### **11. How does Spring Boot handle multiple `application.properties` files?**
+
+- **Answer:** It loads `application.properties` first, then environment-specific ones like `application-dev.properties`.
+
+---
+
+### **12. Why is `spring-boot-starter-web` needed for REST APIs?**
+
+- **Answer:** It provides Spring MVC, Jackson (for JSON), and embedded Tomcat.
+
+---
+
+### **13. How to handle exceptions globally in Spring Boot?**
+
+- **Answer:** Use `@ControllerAdvice` with `@ExceptionHandler`.
+
+---
+
+### **14. How does `@Value` annotation work?**
+
+- **Answer:** It injects values from `application.properties`.
+
+---
+
+### **15. What is Spring Boot Actuator?**
+
+- **Answer:** Provides monitoring, metrics, and health checks.
+
+---
+
+### **16. How to secure Spring Boot applications?**
+
+- **Answer:** Use Spring Security, OAuth2, JWT, and enable HTTPS.
+
+---
+
+### **17. What is Circuit Breaker in Spring Boot?**
+
+- **Answer:** Prevents failures in distributed systems using `Resilience4j` or `Hystrix`.
+
+---
+
+### **18. How does Spring Boot handle CORS?**
+
+- **Answer:** Using `@CrossOrigin` annotation or `WebMvcConfigurer`.
+
+---
+
+### **19. How to configure a custom banner in Spring Boot?**
+
+- **Answer:** Place a `banner.txt` file in `src/main/resources/`.
+
+---
+
+### **20. What is the difference between `@RequestBody` and `@ModelAttribute`?**
+
+- **Answer:**
+  - `@RequestBody`: Parses JSON request body.
+  - `@ModelAttribute`: Binds form data (query params and body).
+
+---
+
+### **21. How to handle database migrations in Spring Boot?**
+
+- **Answer:** Use Flyway or Liquibase.
+
+---
+
+### **22. How does Spring Boot handle session management?**
+
+- **Answer:** Using `spring-session` with Redis, JDBC, or Hazelcast.
+
+---
+
+### **23. What is the use of `@Lazy` annotation?**
+
+- **Answer:** Delays bean initialization until needed.
+
+---
+
+### **24. What is `@Scope` annotation in Spring Boot?**
+
+- **Answer:** Defines the bean's lifecycle (`singleton`, `prototype`, etc.).
+
+---
+
+### **25. What is the difference between `@PathVariable` and `@RequestParam`?**
+
+- **Answer:**
+  - `@PathVariable`: Extracts values from URL path.
+  - `@RequestParam`: Gets values from query parameters.
+
+---
+
+### **26. What is Spring Boot's default logging framework?**
+
+- **Answer:** SLF4J with Logback.
+
+---
+
+### **27. How to change the default embedded server in Spring Boot?**
+
+- **Answer:** Exclude Tomcat and add dependencies for Jetty or Undertow.
+
+---
+
+### **28. What is `spring.datasource.initialization-mode` used for?**
+
+- **Answer:** Controls whether to initialize the database schema (`always`, `never`, `embedded`).
+
+---
+
+### **29. What is a Spring Boot Starter?**
+
+- **Answer:** A dependency bundle for common configurations.
+
+---
+
+### **30. More Advanced Questions Coming Soon! Stay Tuned!**
+

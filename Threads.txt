@@ -1,0 +1,182 @@
+
+Generic Types : It allow you to define a class, interfaces, or method with placeholders(type parameters) for the data types they will work with.
+Exm - public class Box<T> { }
+
+T : Type
+E : Element (used in collections)
+K : Key (used in maps)
+V : Value (used in maps)
+N : Number
+
+Bounded Type Parameters : (Upper / Lower)
+Exm - 1. public class Box<T extends Number> {}
+      2. public class Box<T extends Number & Printable & Comparable(T)> {} - In this case extends the Class Number and implement the Printable & Comparable interface. Class will always be first.
+	    ex: class MyNumber extends Number implements Printable, Comparable<MyNumber> { }
+	        Box<MyNumber> box = new Box<>();
+
+Generic Constructor : We can make a constroctor generic by adding the type before the constructor.
+Exm : public class Box {
+        public <T extend Number> Box(T Val) { }
+      }		
+
+Generic Method : 
+Exm : 	 public <T> String printValue(T[] arr) { } 
+	  
+Wildcards(?) : In Java Generics, wildcards(?) are a special kind of type argument that can be used in method arguments or class definitions to represent an unknown type.
+Exm : 1. public static void printData(ArrayList<?> data){ 
+            for(Object item : data){ sysout(item); }
+	     }
+	  2. public static double sum(List<? extends Number> numbers) {} - Upper Bounded
+	  3. public static void printData(List<? super Integer> lst) { } - Lower Bounded
+
+Type Erasure : Java erase Generic the type and change by the Object or extended class internally at runtime.
+** Java does not support generic exceptions due to type erasure.
+
+
+MultiThreading:
+
+ CPU : 
+ 
+ Core : A core is an individual processing unit within a CPU.
+ 
+ Program : A program is a set of instructions written in a programming language that tells the computer how to perform a specif task. 
+ 
+ Process : is an instanec of a program that is being execute. 
+
+ Thread : A thread is the smallest unit of execution within a process.
+
+ Multitasking : It allows an operating system to run munltiple process simultaneously. 
+ 
+ MultiThreading : It refers to the ability to execute multiple threads within a single process concurrently. It enhances the efficiency of multitasking by breaking down individual task into smaller sub-task or threads.
+
+ Executors Framework : from java 5 onwards It is used to create multiple threads and manage them easily.
+
+Multhreading :
+
+LifeCycle :
+   1.New
+   2.Runnable
+   3.Running
+   4.Blocked / Waiting
+   5.Terminate
+   
+Methods :
+   run()
+   start()
+   sleep()
+   join()
+   setPriority()
+   interrupt()
+   yield()
+   setDaemon()   // Daemon Thread , User Thread
+   
+Synchronization :     
+  
+  synchronized
+  race condition
+  mutual exclusion
+  
+Locks :
+    
+	shared resource
+    two typs of lock : 1. Intrinsic - build-in (using synchronized keyword ) 
+                       2. Explicit  -  More advance (using Lock class)
+  
+    ReentrantLock : 
+      methods : 
+	    lock()
+		trylock()
+		unlock()
+		lockInterruptibly()
+		
+	Fairness of Locks :	
+	   Lock lock = new ReentrantLock(true); // fairlock
+       Lock lock = new ReentrantLock();	//unfairlock  
+	
+    Read/Write Lock : 
+       ReadWriteLock lock = new ReentrantReadWriteLock();
+       Lock readLock = lock.readLock();
+       Lock writeLock = lock.writeLock();
+
+DeadLock :
+    It is a situation in multithreading where two or more threads are blooked forever, wating for each other to release a resource.
+    
+    It typically occur when four condition are met simultaneously:
+        1. Mutual Exclusion
+        2. Hold and Wait
+        3. No Preemption
+        4. Circular Wait
+
+    To prevent it use consistant ordering of threads to accuer a lock :
+    ex: synchronized(pen){ // will only execute when it has pen thread lock
+            paper.writeWithPaperAndPen(pen);
+        }
+
+Thread Comunication :
+    methods to use inter comunicate :
+      wait(), notify(), notifyAll() ->  These three methods can only be called within a synchronized block/method 
+ 	 
+Thread Safety :
+    using Synchronized, ReentrantLock, ReentrantReadWriteLock etc.	 
+
+Thread Pool : 
+   It is a Collection of pre initialized thread which are ready to perform a task.
+   why : 1. Resourece management
+         2. Response time
+		 3. Control over Thread count
+		 
+Executors Framework :
+   
+    ExecutorService executor = Executors.newFixedThreadPool(9);
+    methods :
+	    newSingleThreadExecutor()
+        newFixedThreadPool(3)
+		newCachedThreadPool()
+		submit()
+		shutdown()
+		shutdownNow()
+		isShutdown(), isTerminated()
+	    awaitTermination(1,TimeUnit.SECONDS)
+		invokeAll() - It blocks the main thread untill all the list of callable input will    executed, and return the list of Future.
+		invokeAny() - will return value when any thread will complete.
+		
+		
+	Future DataType :	
+		Future<Integer> future = executorService.submit(() -> 42);
+		
+		methods: future.isDone(), future.get(), 
+		future.cancle(true/false) -> if false then if thread is running then it will not stop.
+		
+Callable : It is same as Runnable but it will return some data. 
+    It can also throws the exception but Runnable can't throws. 
+
+ScheduledExecuterService :
+
+    ScheduledExecuterService scheduler = Executors.newScheduledThreadPool(2);
+	1. scheduler.schedule(() -> s.o.p("Hello"), 5, TimeUnit.SECONDS);
+	2. scheduler.scheduleAtFixedRate(() -> s.o.p("Hello"),5,5,TimeUnit.SECONDS);
+	   scheduler.schedule(() -> scheduler.shutdown(),20,TimeUnit.SECONDS);
+	3. scheduleWithFixedDelay();  - It will work after the completion of previous task with delay time, Taks will not overlap
+	
+CountDownLatch : When we have to wait the one or more thread to complete their taks we can use countDownLatch. But once it completed then cann't reuse.
+    CountDownLatch latch = new CountDownLatch(3);
+	latch.await(); latch.await(5,TimeUnit.SECONDS);
+	latch.countDown(); 
+    
+CyclicBarrier : It does not stop the main thread.  
+    CyclicBarrier barrier = new CyclicBarrier(3); 
+	barrier.await();
+	barrier.reset();
+	barrier.getParties();
+	barrier.getNumberWaiting();
+	
+	CyclicBarrier barrier2 = new CyclicBarrier(3, new Runnable(){
+	                                  @Overrite
+									  public void run(){
+									    sysout("System startup Completed.. ");
+									  }	
+	                             });
+    								 
+CompletableFuture : 
+
+	

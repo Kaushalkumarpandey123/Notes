@@ -1,0 +1,24 @@
+Hello, good afternoon.
+
+Thank you for the opportunity to introduce myself.
+
+I am Kaushal Kumar Pandey, from Varanasi. I have been working with Newgen Software Technologies, Noida, for the past three years as a Senior Software Developer in the Trade & Finance department.
+
+During my tenure, I have worked on several projects, including IRM (Inward Remittance), ORM (Outward Remittance), and BG (Bank Guarantee) for clients such as IndusInd Bank, Federal Bank, Central Bank of India, and currently, I am working on Export Bills for NCBA Bank, Kenya.
+
+In my role, I directly and indirectly interact with clients, users, and stakeholders to understand their requirements. I then develop and integrate solutions with their existing systems, such as Finacle Core Banking, Finastra, and T24.
+
+I have over three years of experience in Java, Spring, Spring Boot, Spring Batch, Spring Security, Microservices, and API development (REST and SOAP). Additionally, I have led teams in building standalone modules and services, including Trade Memo Service, Customer Master, Charge Modules, NESL Service, Accounting, and Amortization Services, which are reusable across multiple projects and clients.
+
+Thank you!
+
+
+I’m Kaushal Kumar Pandey from Varanasi, currently working as a Senior Software Developer at Newgen Software Technologies in Noida for the past three years. I specialize in Trade & Finance, having worked on projects like IRM, ORM, and BG for clients including IndusInd Bank, Federal Bank, and Central Bank of India. Currently, I’m working on Export Bills for NCBA Bank, Kenya.
+
+I have expertise in Java, Spring, Spring Boot, Microservices, and API development, and have led teams to build reusable modules and services for clients. I collaborate closely with clients and stakeholders to develop solutions integrated with core banking systems like Finacle and T24.
+
+Thank you!
+
+
+
+

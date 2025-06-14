@@ -1,0 +1,55 @@
+
+
+1. Monolithic architechter
+2. Microservice architechter
+3. Eureka Server
+4. API Gateway - distribute request to diferent services
+    Client - Api (http request )
+    Api - service (tcp/udp -(rest/grpc) - intercomunication - )
+5. Load balancer  - distribute the request on multiple instance of a service 
+
+
+Linux - AWS
+EC2  - Elastic Compute
+Server less
+
+Straitigy design pattern -----> when child class is getting duplicates code
+Observable design pattern ----> use the object of observable into the observer
+Decorator design pattern -----> In this pattern two object are dependent on each other
+Factory Vs Abstract Factory --> 
+
+
+
+@Resource
+@Condission- Onmissing
+Profiling
+Actuator  AOP @After, @Before, @AfterReturn, @AfterThrowing, @Arround
+Scope - Singlton, Prototype, session, request, application, web Socket
+Scop interface implement for custom scop
+
+
+
+what will happen @Service & @Repository,, and use @Componenet instead on these.
+diffrece between @Repository and @Componenet
+@Transactionsal
+If two threads are using the same @Transactionsal at same time what will happen.
+ACID property
+in which seinario we should use @Get & @Post.
+@ControllerAdvice
+API 10 sec 5 sec time complexity 77
+equals and hashcode
+find the repeated number.
+Least Recently Used (LRU) Cache.
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+Model: Represents the data and business logic of the application.
+View: Handles the presentation of data to the user (e.g., HTML, JSON).
+Controller: Acts as an intermediary, handling user requests, interacting with the model, and selecting the appropriate view.
+
+Framework that provides a structured approach to building web applications based on the Model-View-Controller (MVC) design pattern.
