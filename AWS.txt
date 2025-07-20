@@ -7,5 +7,38 @@ What is Cloud ? :
 
 
 
+ec2-54-197-9-168.compute-1.amazonaws.compute-1
+arn:aws:s3:::kaushal-aws-bucket-0
+https://kaushal-aws-bucket-0.s3.us-east-1.amazonaws.com/AwsPracticeJar.jar
+aws s3 cp s3://kaushal-aws-bucket-0/AwsPracticeJar.jar .
 
+
+
+Connect with the EC2 ->
+	ssh -i my-key.pem ec2-user@<EC2-PUBLIC-IP> : ssh -i Book Store Key.pem ec2-user@ec2-54-197-9-168.compute-1.amazonaws.compute-1
+
+install java ->
+	cd /opt/java
+	sudo curl -L -o jdk-21_linux-x64_bin.tar.gz https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.tar.gz
+	tar -xvzf jdk-21_linux-x64_bin.tar.gz
+    
+	sudo tee /etc/profile.d/java.sh <<EOF
+	export JAVA_HOME=/opt/java/jdk-21.0.8
+	export PATH=\$JAVA_HOME/bin:\$PATH
+	EOF
+
+    source /etc/profile.d/java.sh
+	java -version
+
+Upload Spring boot jar into s3:
+	aws s3 cp AwsPracticeJar.jar s3://kaushal-aws-bucket-0/
+
+Download from s3 :
+	aws s3 cp s3://kaushal-aws-bucket-0/AwsPracticeJar.jar .
+	
+Run the jar file :
+	java -jar AwsPracticeJar.jar
+    nohup java -jar BookStore.jar > output.log 2>&1 &    // runs in backgroud
+	
+	
 
